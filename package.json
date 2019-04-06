@@ -1,0 +1,56 @@
+{
+  "name": "mini-semver",
+  "version": "0.1.0",
+  "description": "Fast semantic version parser based on node-semver",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "types": "dist/types/index.d.ts",
+  "scripts": {
+    "build": "npm run lint && npm run coverage && npm run clean && npm run build:cjs && npm run build:esm",
+    "build:cjs": "tsc -b config/tsconfig.cjs.json",
+    "build:esm": "tsc -b config/tsconfig.esm.json",
+    "clean": "rimraf dist",
+    "coverage": "nyc mocha --opts mocha.opts",
+    "dev:cjs": "tsc -b --watch config/tsconfig.cjs.json",
+    "dev:esm": "tsc -b --watch config/tsconfig.esm.json",
+    "lint": "tslint 'src/**/*.ts' 'test/**/*.ts'",
+    "test": "mocha --opts mocha.opts",
+    "test:dev": "mocha --opts mocha.opts -w"
+  },
+  "keywords": [
+    "semver"
+  ],
+  "contributers": [
+    "ajaxlab7@gmail.com"
+  ],
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ajaxlab/mini-semver.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ajaxlab/mini-semver/issues"
+  },
+  "homepage": "https://github.com/ajaxlab/mini-semver",
+  "devDependencies": {
+    "@types/chai": "^4.1.7",
+    "@types/mocha": "^5.2.6",
+    "@types/node": "^10.12.24",
+    "chai": "^4.2.0",
+    "mocha": "^5.2.0",
+    "nyc": "^13.3.0",
+    "rimraf": "^2.6.2",
+    "tap": "^12.6.1",
+    "ts-node": "^8.0.2",
+    "tslint": "^5.12.1",
+    "tslint-lines-between-class-members": "^1.3.1",
+    "typescript": "^3.3.3"
+  },
+  "dependencies": {
+    "@types/semver": "^6.0.0",
+    "semver": "^6.0.0"
+  },
+  "tap": {
+    "check-coverage": true
+  }
+}
