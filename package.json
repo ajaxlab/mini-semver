@@ -2,9 +2,9 @@
   "name": "mini-semver",
   "version": "0.1.0",
   "description": "Fast semantic version parser based on node-semver",
-  "main": "dist/cjs/index.js",
+  "main": "dist/cjs/index.cjs.js",
   "module": "dist/esm/index.js",
-  "types": "dist/types/index.d.ts",
+  "types": "dist/types/index.cjs.d.ts",
   "scripts": {
     "build": "npm run lint && npm run coverage && npm run clean && npm run build:cjs && npm run build:esm",
     "build:cjs": "tsc -b config/tsconfig.cjs.json",
@@ -40,6 +40,7 @@
     "mocha": "^5.2.0",
     "nyc": "^13.3.0",
     "rimraf": "^2.6.2",
+    "rollup": "^1.9.0",
     "tap": "^12.6.1",
     "ts-node": "^8.0.2",
     "tslint": "^5.12.1",
@@ -47,10 +48,16 @@
     "typescript": "^3.3.3"
   },
   "dependencies": {
-    "@types/semver": "^6.0.0",
-    "semver": "^6.0.0"
+    "@types/semver": "6.0.0",
+    "semver": "6.0.0"
   },
   "tap": {
     "check-coverage": true
-  }
+  },
+  "files": [
+    "bin",
+    "dist",
+    "README.md",
+    "src"
+  ]
 }
