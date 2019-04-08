@@ -1,10 +1,13 @@
 {
   "name": "mini-semver",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Fast semantic version parser based on node-semver",
   "main": "dist/cjs/index.cjs.js",
   "module": "dist/esm/index.js",
   "types": "dist/types/index.cjs.d.ts",
+  "bin": {
+    "mini-semver": "./bin/mini-semver"
+  },
   "scripts": {
     "build": "npm run lint && npm run coverage && npm run clean && npm run build:cjs && npm run build:esm",
     "build:cjs": "tsc -b config/tsconfig.cjs.json",

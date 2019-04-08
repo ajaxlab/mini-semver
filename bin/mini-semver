@@ -117,7 +117,8 @@ function success () {
 }
 
 function help () {
-  console.log(['SemVer ' + version,
+  console.log(['mini-semver ' + version,
+    'Fast semantic version parser (node-semver wrapper)',
     '',
     'A JavaScript implementation of the https://semver.org/ specification',
     'Copyright Isaac Z. Schlueter',
