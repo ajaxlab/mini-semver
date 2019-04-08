@@ -1,5 +1,7 @@
 # mini-semver
 
+[![npm](https://img.shields.io/npm/v/mini-semver.svg)](https://www.npmjs.com/package/mini-semver)
+
 Fast semantic version parser ([node-semver](https://github.com/npm/node-semver) wrapper)
 
 ## Motive
