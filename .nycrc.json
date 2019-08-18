@@ -4,7 +4,7 @@
   "lines": 98,
   "statements": 98,
   "functions": 100,
-  "branches": 100,
+  "branches": 93,
   "include": [
     "src/**/*.ts"
   ],
